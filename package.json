@@ -1,0 +1,26 @@
+{
+  "name": "moviecollection_angularjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tenzin1993/moviecollection_angularjs.git"
+  },
+  "author": "Tenzin Chosang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tenzin1993/moviecollection_angularjs/issues"
+  },
+  "homepage": "https://github.com/Tenzin1993/moviecollection_angularjs#readme",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-route": "^1.6.9",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "pg": "^7.4.1"
+  }
+}
