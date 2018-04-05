@@ -1,7 +1,7 @@
 # moviecollection_angularjs
 
-1. [ ] Create a database with tables
-2. [ ] Create folder/set up
+1. [X] Create a database with tables
+2. [X] Create folder/set up
 3. [ ] Add html form
 4. [ ] Create a Post route to submit new movies to serverside.
 5. [ ] Create a Get route to obtain movies from the database.
