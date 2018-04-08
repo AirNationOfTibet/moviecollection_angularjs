@@ -3,22 +3,26 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Movie Collection</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/angular-material.css">
-    <script src="/vendors/angular.js"></script>
-    <script src="/vendors/angular-route.js"></script>
-    <script src="/vendors/angular-aria.min.js"></script>
-    <script src="/vendors/angular-messages.min.js"></script>
-    <script src="/vendors/angular-animate.min.js"></script>
-    <script src="/vendors/angular-material.min.js"></script>
-    <script src="/scripts/client.js"></script>
+    <script src="vendors/angular.js"></script>
+    <script src="vendors/angular-route.js"></script>
+    <script src="vendors/angular-aria.js"></script>
+    <script src="vendors/angular-messages.js"></script>
+    <script src="vendors/angular-animate.js"></script>
+    <script src="vendors/angular-material.js"></script>
+    <script src="scripts/client.js"></script>
+    <script src="scripts/service/movie.service.js"></script>
+    <script src="scripts/controllers/add.controller.js"></script>
+    <script src="scripts/controllers/manage.controller.js"></script>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="main.js"></script>
 </head>
-<body ng-app="movieApp">
-    <h1>Movie Collection</h1>
-    <div>
+<body ng-app="MovieApp">
+    <header>
+        <h1>Movie Collection</h1>
+    </header>
+    <div class="nav">
         <ul>
             <li>
                 <a href="#!/add">Add Entry</a>
@@ -27,6 +31,10 @@
                 <a href="#!/manage">Manage Genres</a>
             </li>
         </ul>
+    </div>
+    <div>
+        <ng-view>
+        </ng-view>
     </div>
 </body>
 </html>
