@@ -1,6 +1,6 @@
-let app = angular.module('MovieApp', ['ngRoute']);
+let MovieApp = angular.module('MovieApp', ['ngRoute']);
 
-app.config(['$routeProvider', function ($routeProvider){
+MovieApp.config(['$routeProvider', function ($routeProvider){
     console.log('route config is working');
     $routeProvider
         .when('/', {
@@ -8,10 +8,10 @@ app.config(['$routeProvider', function ($routeProvider){
         })
         .when('/add', {
             templateUrl:'views/add.html',
-            controller: 'addController as vm'
+            controller: 'AddController as vm'
         })
         .when('/manage', {
             templateUrl: 'views/manage.html',
-            controller: 'manageController as vm'
+            controller: 'ManageController as vm'
         });
 }]);

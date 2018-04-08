@@ -1,0 +1,14 @@
+<div class = "container">
+    <h2>Add Genre</h2>
+    <input type="text" placeholder="Add a genre" ng-model="vm.genreToAdd.genre">
+    <button ng-click="vm.addGenre(vm.genreToAdd)">Submit</button>
+    <h3>Movies</h3>
+    <table>
+        <tr>
+            <th>Genre</th><th>Total Movies</th><th>Action</th>
+        </tr>
+        <tr ng-repeat= "genre in vm.genres.list ">
+            <td>{{genre.genre}}</td><td>1</td><td><button>Delete</button></td>
+        </tr>
+    </table>
+</div>
