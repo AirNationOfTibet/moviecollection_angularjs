@@ -18,7 +18,7 @@ router.post('/', (req, res)=>{
 
 router.get('/', (req, res) =>{
     console.log('GET /manage');
-    pool.query(`SELECT "genre"."genre", count ("movies"."genre_id") FROM movies JOIN genre ON genre.id = movies.genre_id GROUP BY "genre";`)
+    pool.query(`SELECT "genre"."genre", coalesce(count ("movies"."genre_id"),0) FROM movies RIGHT JOIN genre ON genre.id = movies.genre_id GROUP BY "genre";`)
         .then(result => {
             res.send(result.rows);
         })
