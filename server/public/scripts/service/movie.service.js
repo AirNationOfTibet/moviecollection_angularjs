@@ -24,6 +24,7 @@ MovieApp.service('CollectionService', ['$http', function($http){
             }).then((response) => {
                 console.log('response', response);
                 self.movies.list = response.data;
+                console.log(self.movies.list);
             })
             .catch((response)=>{
                 console.log('error making get request ', error);
@@ -49,6 +50,7 @@ MovieApp.service('CollectionService', ['$http', function($http){
                 data: genre
             }).then((response)=>{
                 console.log('successfully posted genre');
+                self.getGenres();
             }).catch((error)=>{
                 console.log('error posting genre ', err);
             });
@@ -65,6 +67,18 @@ MovieApp.service('CollectionService', ['$http', function($http){
             .catch((response)=>{
                 console.log('error making get request ', error);
             });
+        }
+
+        self.deleteGenre = function(genre) {
+            $http({
+                method:'DELETE',
+                url:`/manage/${genre}`,
+            }).then((response)=>{
+                self.getGenres();
+                console.log('success deleting genre');
+            }).catch((error)=>{
+                console.log('error making delete request', error);
+            })
         }
 
 

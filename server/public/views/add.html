@@ -3,10 +3,9 @@
     <form ng-submit = "vm.addMovie(vm.movie)">
         <input type="text" placeholder="name" ng-model="vm.movie.name"><br>
         <select ng-model="vm.movie.genre">
-                <!-- not selected / blank option -->
                 <option value="">select genre</option>
                 <!-- repeat over genres -->
-                <option ng-repeat="genre in vm.genres.list" value="{{genre.genre}}">{{genre.genre}}</option>
+                <option ng-repeat="genre in vm.genres.list" value="{{genre.id}}">{{genre.genre}}</option>
         </select><br>
         <!-- <input type="text" placeholder="genre" ng-model="vm.movie.genre"><br> -->
         <input type="text" placeholder="release (mm-dd-yyyy)" ng-model="vm.movie.release"><br>
