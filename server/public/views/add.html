@@ -17,7 +17,7 @@
     <div class="movieClasses" ng-repeat="movie in vm.movies.list">
         <p>{{movie.name}}</p>
         <p>{{movie.genre_id}}</p>
-        <p>{{movie.release}}</p>
+        <p>{{movie.release | date: 'MMMM-dd-yyyy'}}</p>
         <p>{{movie.runtime}} mins</p>
         <button ng-click="vm.deleteMovie(movie.moviesid)">Delete</button>
     </div>   
