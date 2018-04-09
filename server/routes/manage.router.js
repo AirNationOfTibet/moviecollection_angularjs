@@ -18,7 +18,8 @@ router.post('/', (req, res)=>{
 
 router.get('/', (req, res) =>{
     console.log('GET /manage');
-    pool.query(`SELECT "genre"."genre", coalesce(count ("movies"."genre_id"),0) FROM movies RIGHT JOIN genre ON genre.id = movies.genre_id GROUP BY "genre";`)
+    pool.query(`SELECT "genre"."genre", "genre"."id", count ("movies"."genre_id") FROM movies RIGHT JOIN genre ON genre.id = movies.genre_id GROUP BY "genre"."genre", "genre"."id";
+    `)
         .then(result => {
             res.send(result.rows);
         })
@@ -28,7 +29,7 @@ router.get('/', (req, res) =>{
 })
 
 router.delete('/:id', (req, res) => {
-    console.log('DELETE', req.params.id);
+    console.log('DELETE', req.params);
     const genreid = req.params.id;
     pool.query('DELETE FROM "genre" WHERE "id" = $1;', [genreid])
         .then((result) => {
