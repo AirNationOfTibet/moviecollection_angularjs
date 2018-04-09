@@ -5,4 +5,5 @@ function(CollectionService){
     self.genres = CollectionService.genres;
     self.getGenres = CollectionService.getGenres;
     self.addGenre = CollectionService.addGenre;
+    self.deleteGenre = CollectionService.deleteGenre;
 }]);

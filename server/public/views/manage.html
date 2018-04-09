@@ -8,7 +8,7 @@
             <th>Genre</th><th>Total Movies</th><th>Action</th>
         </tr>
         <tr ng-repeat= "genre in vm.genres.list ">
-            <td>{{genre.genre}}</td><td>1</td><td><button>Delete</button></td>
+            <td>{{genre.genre}}</td><td>{{genre.count}}</td><td><button ng-click="vm.deleteGenre(genre.id)">Delete</button></td>
         </tr>
     </table>
 </div>

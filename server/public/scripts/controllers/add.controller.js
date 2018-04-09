@@ -6,5 +6,6 @@ function(CollectionService){
     self.addMovie = CollectionService.addMovie;
     self.getMovies = CollectionService.getMovies;
     self.deleteMovie = CollectionService.deleteMovie;
+    self.genres = CollectionService.genres;
 
 }]);
